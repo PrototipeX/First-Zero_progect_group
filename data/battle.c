@@ -41,6 +41,7 @@ void battle(int* flag, struct pole* pole, struct goblin* goblin, struct player* 
             while (getchar() != '\n')
                 ;  // Очистка буфера ввода}
         }
+
         if (*action == 'm') menu(pole, flag);
     } while ((*action != 'r') && (*action != 'm') && (*flag != 2) && (goblin->goblin_count != 0));
     if ((*action == 'r' || *action == 'R') && (goblin->goblin_count != 0))

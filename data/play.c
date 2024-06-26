@@ -3,7 +3,7 @@
 void play(int* flag, struct pole* pole, struct goblin* goblin, struct player* player, int ax, int ay) {
     int game = 0;
     char action = 0;
-    char mass[10][69];
+    char mass[pole->h][pole->w + 1];
     int i, key;
     int x = 10, y = 5;
     int ox, oy;
@@ -12,12 +12,12 @@ void play(int* flag, struct pole* pole, struct goblin* goblin, struct player* pl
         printf("\33[0d\33[2J");
         gamekey(pole);  // point key
         printf("\n");
-        sprintf(mass[0], "====================================================================");
+        sprintf(mass[0], "=====================================================================");
 
         for (i = 1; i < 9; i++)
-            sprintf(mass[i], "#                                                                  #");
+            sprintf(mass[i], "#                                                                   #");
 
-        sprintf(mass[9], "====================================================================");
+        sprintf(mass[9], "=====================================================================");
 
         mass[y][x] = '@';
         mass[ay][ax] = 'o';

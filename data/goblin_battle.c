@@ -12,7 +12,7 @@ int goblin_battle(int* flag, struct pole* pole, struct goblin* goblin, struct pl
         ay = seedrand(timerand) * 1.0 / RAND_MAX * 8 + 1;
         helloHero(pole, player, size);  // inter hero name
         // printf("Name3: %s\n", player->hero_name);
-        intro(pole);
+        intro();
         play(&game, pole, goblin, player, ax, ay);
     }
     // printf("Game dododo %d\n", *flag);

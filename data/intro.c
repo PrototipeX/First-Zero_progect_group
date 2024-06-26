@@ -1,6 +1,6 @@
 #include "global.h"
 
-void intro(struct pole* pole) {
+void intro() {
     char* buf = (char*)malloc(sizeof(char) * 10000);
     char* text = NULL;
     FILE* file = fopen("Intro.txt", "rt");
@@ -19,20 +19,6 @@ void intro(struct pole* pole) {
     while (fgets(buf, 10000, file) != NULL) {
         strcat(text, buf);
         i++;
-    }
-
-    int h = pole->h;
-    int w = pole->w;
-    for (int y = 0; y < h; y++) {
-        for (int x = 0; x < w; x++) {
-            if ((y == 0 && x != -1) || (y == h - 1 && x != -1 && x != w)) {
-                printf("-");
-            } else if ((x == 0 && y != 0) || (x == w - 1 && x != 0 && y != h - 1)) {
-                printf("|");
-            } else
-                printf(" ");
-        }
-        printf("\n");
     }
     printf("%s", text);
     getchar();

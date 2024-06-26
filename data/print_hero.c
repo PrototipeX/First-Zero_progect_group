@@ -12,5 +12,5 @@ void print_hero(struct player* player) {
     printf("| Defense| %7d | ----- |\n", player->player_defence);
     printf("| Exp    | %7d | ----- |\n", player->player_experiances);
     printf("| Level  | %7d | ----- |\n", player->player_level);
-    printf("+--------+---------+--------+\n");
+    printf("+--------+---------+-------+\n");
 }

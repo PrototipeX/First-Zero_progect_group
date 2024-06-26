@@ -43,6 +43,6 @@ void battle(int* flag, struct pole* pole, struct goblin* goblin, struct player* 
 int get_variant(int count);
 int menu(struct pole* pole, int* game);
 void printmenu();
-void intro(struct pole* pole);
+void intro();
 
 #endif
