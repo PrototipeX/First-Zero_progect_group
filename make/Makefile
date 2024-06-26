@@ -12,10 +12,10 @@ PATH_3 = ../build/
 # Общая сборка по умолчанию
 all: make
 # Сборка по зависимостям, позволяет собрать новый общий файл 
-# при изменении любой библиотеки, не компилируя всё (экон. времени)
+# при изменении любой функции библиотеки, не компилируя всё (типа экон. времени)
 make: hel.o seedrand.o print_hero.o gamekey.o gameover.o compaund.o goblin_battle.o play.o battle.o get_variant.o menu.o printmenu.o intro.o main11.o
 	$(CC) $(FLAGS) $(PATH_1)hel.o $(PATH_1)seedrand.o $(PATH_1)print_hero.o $(PATH_1)gamekey.o $(PATH_1)gameover.o $(PATH_1)compaund.o $(PATH_1)goblin_battle.o $(PATH_1)play.o $(PATH_1)battle.o $(PATH_1)get_variant.o $(PATH_1)printmenu.o $(PATH_1)menu.o $(PATH_1)intro.o $(PATH_1)main11.o -o $(PATH_3)GAME.exe
-# статические библиотеки:
+# библиотека функций:
 hel.o: $(PATH_2)hel.c $(PATH_2)global.h
 	$(CC) $(FLAGS) -c $(PATH_2)hel.c -o $(PATH_1)hel.o
 seedrand.o: $(PATH_2)seedrand.c $(PATH_2)global.h
@@ -42,6 +42,7 @@ printmenu.o: $(PATH_2)printmenu.c $(PATH_2)global.h
 	$(CC) $(FLAGS) -c $(PATH_2)printmenu.c -o $(PATH_1)printmenu.o
 intro.o: $(PATH_2)intro.c $(PATH_2)global.h
 	$(CC) $(FLAGS) -c $(PATH_2)intro.c -o $(PATH_1)intro.o
+# основной файл программы:
 main11.o: $(PATH_2)main11.c $(PATH_2)global.h
 	$(CC) $(FLAGS) -c $(PATH_2)main11.c -o $(PATH_1)main11.o
 clean:
