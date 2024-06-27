@@ -54,19 +54,21 @@ develop - ветка для слияний уже готовых фич, что 
 
 По пришедшей в ответ ссылке, склонируйте к себе develop.
 
-$ ssh-keygen -t rsa
+Генерация ключей и минимум команд достаточный для работы.
+
+ssh-keygen
 
 Ентер и всо что там нада
 
-$ cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub
 
 git init
 
-git branch name
+git branch "name"
 
-git switch name
+git switch "name"
 
-git branch -d name
+git branch -d "name"
 
 git status
 
@@ -74,11 +76,9 @@ git add --all
 
 git commit -m "name"
 
-git push origin name
+git push origin "name"
 
-/
-
-/
+git merge "name" (from develop for overwrite it)
 
 /
 
