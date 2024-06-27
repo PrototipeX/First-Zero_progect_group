@@ -54,6 +54,12 @@ develop - ветка для слияний уже готовых фич, что 
 
 По пришедшей в ответ ссылке, склонируйте к себе develop.
 
+$ ssh-keygen -t rsa
+
+Ентер и всо что там нада
+
+$ cat ~/.ssh/id_rsa.pub
+
 git init
 
 git branch name
@@ -76,11 +82,11 @@ git push origin name
 
 /
 
-/
 
-/
 
-/
+
+
+
 
 ## Chapter II
 
